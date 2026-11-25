@@ -49,6 +49,7 @@ class HomePage extends StatelessWidget {
         children: [
           Row(
             children: [
+              SizedBox(width: 10, height: 20),
               ClipOval(
                 //ตัดเป็นวงรี
                 child: Image.asset(
@@ -172,14 +173,29 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            children: [
+              SizedBox(width: 110, height: 20),
+              Icon(Icons.grid_on, size: 35, color: Colors.white),
+              SizedBox(width: 138, height: 20),
+              Icon(Icons.person_pin, size: 35, color: Colors.white),
+            ],
+          ),
+          SizedBox(height: 10),
           GridView.count(
             crossAxisCount: 3,
             shrinkWrap: true,
-            children: [Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNK3stnuYqsOfj6Hr5DFz8nj4_z1KBHwbr__7arqTyOg&s=10"),
-             Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFwRXu6tBSft5iTJTFoQ0qKQ4pEqrkiUOhvZI0PV6W_g&s=10"),
-            Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKdIEvwK3-YW_zdGPGWl0Y6BYyyVSimtG4csyr3xtcXQ&s=10")],
-            
-
+            children: [
+              Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNK3stnuYqsOfj6Hr5DFz8nj4_z1KBHwbr__7arqTyOg&s=10",
+              ),
+              Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFwRXu6tBSft5iTJTFoQ0qKQ4pEqrkiUOhvZI0PV6W_g&s=10",
+              ),
+              Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKdIEvwK3-YW_zdGPGWl0Y6BYyyVSimtG4csyr3xtcXQ&s=10",
+              ),
+            ],
           ),
         ],
       ),
